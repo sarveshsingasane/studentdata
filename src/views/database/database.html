@@ -1,0 +1,34 @@
+ <div class="container" ng-controller="tableCtrl">               
+    <h1>Database</h1>
+    <table class = "table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+                <th></th>
+            </tr>
+        </thead>
+ 
+        <tbody>
+            <tr>
+                <td><input class="form-control" ng-model="contact.name" ng-change="checkInputVal()" required></td>
+                <td><input type="email" class="form-control" ng-model="contact.email" ng-change="checkInputVal()" required></td>
+                <td><button class="btn btn-primary" ng-disabled="hideField" ng-click="addContact()">Add Contact</button> </td>
+ 
+            </tr>
+            <tr ng-repeat="contact in Contactlist">
+                
+                <td>{{contact.name}}</td>
+                <td>{{contact.email}}</td>
+
+                <!-- <td><strong>{{contact.name}}</strong></td>
+                <td><strong>{{contact.email}}</strong></td> -->
+
+                <td><button class="btn btn-danger" ng-click= "deleteContact(contact._id)">Remove</button></td>
+ 
+            </tr>
+        </tbody>
+    </table>
+ </div>
+ 

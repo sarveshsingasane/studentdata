@@ -1,0 +1,155 @@
+.header{
+  color: #ffffff;
+  background-color: rgb(43, 150, 199);
+  text-align: center;
+  /* margin-top: 20px; */
+}
+
+.nav{
+  color: rgb(0, 0, 0);
+  padding: 24px;
+  background-color: rgb(43, 150, 199);
+  height:100%;
+}
+
+.btn-primary{
+  color: #000;
+  background-color: FFF;
+  border-color: #ccc;
+  margin-left: 17px;
+  opacity: 0.8;
+}
+
+.col-sm-7{
+  
+  /* width:100%; */
+  padding: 10px;
+}
+
+.col-sm-3{
+  width:45%;
+  padding: 10px;
+}
+
+
+
+*:focus{
+outline:1px solid;
+}
+
+.foodapp{
+  font-family: sans-serif;
+}
+
+
+.welcometxt{
+  color:#FFF;
+  height:auto;
+  width: 80%;
+}
+
+a {
+  color: #ffff;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  padding-bottom: 2em;
+  position: center;
+  height: 500px;
+}
+
+.divtable
+{
+    display: table;
+    background-color:transparent;
+    border:1px ;
+    border-spacing:5px;
+   
+}
+.divheader{
+  color: #fff;
+  display: inline;
+  padding: 14px;
+}
+.records{
+  color: #fff;
+  display: inline;
+  padding: 0px 0px 0 5px;
+}
+
+
+.divrow{ 
+   display:inline;
+   /* width: 100%; */
+   border:1px solid transparent;
+}
+
+.divcell
+{
+    float:left;
+    display:table-column;
+    width:170px;
+    background-color:#ffff;
+    border: black;
+    border:1px solid black;
+    opacity: 0.8;
+    padding-left: 15px;
+
+} 
+
+h2 {
+  color :#FFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+} 
+
+.row{
+  background-image: url(/src/images/home_image4.jpeg);
+  color: black;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height:100%;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+
+li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  /* padding: 14px 20px; */
+  /* text-decoration: black; */
+  font-size: 25px;
+}
+
+
+.footer{
+  text-align: center; 
+  color: #ffffff;
+  background-color: rgb(43, 150, 199);
+  }
+.scrollbar {
+  overflow: auto;
+    height: 400px;
+    color: #555;
+    width: 650px;
+}

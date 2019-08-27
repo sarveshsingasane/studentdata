@@ -1,40 +1,57 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+  
 module.exports = {
-   module: {
-       rules: [
-        {
-            test : /\.js$/,
-            exclude : /node_modules/,
-            use : {
-                loader : "babel-loader"
-            }
-            
-        },
-           {
-               test: /\.html$/,
-               use: [
-                   {
-                       loader: "html-loader",
-                       options: { minimize: true}
-                   }
-               ]
-           },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    
+                    'style-loader',
+                    'css-loader'
+                ]
+                
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: "html-loader",
+                        options: {minimize: true}
+                    }
 
-           {
-
-            test: /\.(png|svd|jpg|gif)$/,
-            use : [
-                'file-loader'
-            ]
-           },
-
-           
-       ]
-   },
-   plugins: [
-       new HtmlWebPackPlugin({
-           template: "./src/index.html",
-           filename: "./index.html"
-       }),
-   ]
+                ]
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
+            },
+        ]
+    },
+    devServer: {
+        proxy: {
+        "/api": {
+        "target": "http://localhost:3004",
+        "secure": false,
+        "pathRewrite": {
+            "^/api": ""
+        }
+        }
+        }
+      },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
+            filename: "./index.html"
+        }),
+    ]
 }
