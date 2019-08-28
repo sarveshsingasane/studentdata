@@ -40,7 +40,7 @@ module.exports = {
     devServer: {
         proxy: {
         "/api": {
-        "target": "http://localhost:3004",
+        "target": "http://localhost:3006",
         "secure": false,
         "pathRewrite": {
             "^/api": ""

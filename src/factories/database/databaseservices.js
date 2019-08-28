@@ -6,7 +6,7 @@ angular.module('database.service',[])
        function($http) {
 
          var service = {};
-        var urlBase = "/api/student";
+        var urlBase = "/api/students";
 
        
          service.validate = Validate
